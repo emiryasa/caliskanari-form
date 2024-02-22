@@ -22,29 +22,29 @@ import { VideoSection } from '@/components/video-section/video-section'
 // signOut: kullanıcıyı çıkış yapmaya yönlendirmek için kullanılır.
 import { signIn, signOut, useSession } from 'next-auth/react'
 
- const HomeContainer = () => {
+const HomeContainer = () => {
 
   // useSession ile session bilgilerine erişebiliriz.
-  const {data}= useSession();
+  const { data } = useSession();
 
   return (
-   <>
-    <SearchBar/>
-    <MainSection/>
-    <InfoSection/>
-    <TopClassCourses/>
-    <LearnersStudents/>
-    <FeaturedCourses/>
-    <VideoSection/>
-    <InstructorsSection/>
-    <CounterSection/>
-    <ClientsSection/>
-    <BannerSection/>
-    <BecomeInstructorSection/>
-    <LogoBanner/>
-    <BlogSection/>
-    <LastBanner/>
-    <Footer/>
+    <>
+      <SearchBar />
+      <MainSection />
+      <InfoSection />
+      <TopClassCourses />
+      <LearnersStudents />
+      <FeaturedCourses />
+      <VideoSection />
+      <InstructorsSection />
+      <CounterSection />
+      <ClientsSection />
+      <BannerSection />
+      <BecomeInstructorSection />
+      <LogoBanner />
+      <BlogSection />
+      <LastBanner />
+      <Footer />
     </>
   )
 }
