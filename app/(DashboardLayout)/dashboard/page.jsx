@@ -1,36 +1,30 @@
+'use client'
 import Input from '@/components/dashboard/Input'
-import useStore from '@/zustand/index'
-const data = [
-    {
-        id: 1,
-        name: "name",
-        type: "text",
-        text: "Name"
-    },
-    {
-        id: 2,
-        name: "color",
-        type: "color",
-        text: "Color"
-    },
-    {
-        id: 3,
-        name: "image",
-        type: "file",
-        text: "Image"
-    }
-]
+import {useStore} from '@/zustand/index'
+
 export const Page = () => {
-    
+    const data = useStore((state) => state.sections)
+    const updateSectionText = useStore((state) => state.updateSectionText)
+    const updateSectionColor = useStore((state) => state.updateSectionColor)
+    console.log(data)
     return <div className="flex items-center justify-center h-full w-full">
         <span className="text-4xl font-bold">
-        {data.map((input) => (
-        <Input
-            key={input.id}
-            name={input.name}
-            type={input.type}
-            text={input.text}
-        />))}
+            {data.map((item, index) => (
+                <div key={index}>
+                    <Input
+                        name={"name"}
+                        type="text"
+                        value={item.text}
+                        onChange={(e) => updateSectionText(item.id, e.target.value)}
+                    />
+                    <Input
+                        name={"color"}
+                        type="color"
+                        value={item.color}
+                        onChange={(e) => updateSectionColor(item.id, e.target.value)}
+                    />
+                </div>
+            ))}
         </span>
     </div>
 }
