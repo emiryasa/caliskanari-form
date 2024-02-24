@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 function Input({ name, text, ...props}) {
     const [isInputFocused, setIsInputFocused] = useState(false);
-    const isInputFilled = props.value.length > 0 || isInputFocused;
+    const isInputFilled = (props.value && props.value.length > 0) || isInputFocused;
 
     return (
         <div>
