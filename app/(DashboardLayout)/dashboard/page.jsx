@@ -15,8 +15,8 @@ export const Page = () => {
     }, [updateSectionColor]);
 
     return (
-        <div className="flex items-center justify-center h-full w-full">
-            <div className="text-4xl font-bold">
+        <div className="flex items-center justify-center">
+            <div className="text-sm ">
                 {Object.entries(sections).map(([sectionName, sectionData]) => (
                     typeof sectionData === 'object' && (
                         <SectionInputs
@@ -38,13 +38,13 @@ const SectionInputs = React.memo(({ sectionName, sectionData, handleTextChange, 
         {sectionData.map((section, index) => (
             <div key={index}>
                 <input
-                    className=' border border-black text-black'
+                    className='border border-black text-black'
                     name={`text-${sectionName}-${index}`}
                     value={section.text || ''}
                     onChange={(e) => handleTextChange(sectionName, e.target.value, index)}
                 />
                 <input
-                    className=' border border-black text-black'
+                    className='border border-black text-black'
                     name={`color-${sectionName}-${index}`}
                     value={section.textColor || ''}
                     type="color"
