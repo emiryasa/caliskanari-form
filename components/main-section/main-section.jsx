@@ -1,12 +1,18 @@
 import { info, image } from "../constants/index";
 import { CustomButton } from "../helpers/custom-button";
 import {motion} from "framer-motion"
+import { useStore } from "@/zustand/index";
 import "./main-section.css"
+import { use } from "react";
+import { Main } from "next/document";
 
 const MainSection = () => {
-  const { desc1, desc2 } = info;
+  const MainSection = useStore((state) => state.mainSection) || []; // Ensure mainSection is initialized as an empty array if undefined
+  const desc1 = MainSection.length > 0 ? MainSection[0].text : '';
+  const desc2 = MainSection.length > 1 ? MainSection[1].text : '';
+  const desc3 = MainSection.length > 2 ? MainSection[2].text : '';
   const { mainSection,underline,book,pencil,wave,star } = image;
-  
+   
   return (
     <div className="bg-cream  xl:pt-[0px] main-section-hover">
       <div className=" flex flex-col md:flex-row items-center justify-between container mx-auto pb-20">
