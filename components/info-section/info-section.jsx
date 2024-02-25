@@ -1,8 +1,11 @@
 import { informations } from "../constants/index"
 import { motion } from "framer-motion"
 import "./info-section.css"
+import { useStore } from "@/zustand/index";
 
 export const InfoSection = () => {
+  const InfoSection = useStore((state) => state.infoSection) || []; 
+  console.log(InfoSection,"infoSection")
   return (
     <div className="bg-cst_purple info-section bg-center bg-cover py-16">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:p-6 text-white">

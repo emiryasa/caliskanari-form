@@ -7,14 +7,18 @@ export const useStore = create(persist((set) => ({
         { name: "header", textColor: '#000000', buttonColor: "#543EE8", hoverColor: "#241442", text: 'Ara' },
     ],
     mainSection: [
-        { name: "header", textColor: '#241442', text: 'Çalışkan Arı İle Öğrenmek Artık Çok Kolay' },
+        { name: "header", textColor: '#241442', text: 'Çalışkan Arı İle Öğrenmek Artık'},
+        { name: "header", textColor: '#241442', text:'Çok Kolay'},
         { name: "text", textColor: '#000000', text: 'Okul dönemlerinde her gün binlerce öğrencimiz, %100 MEB uyumlu Çalışkan Arı Akademi ile öğrendiklerini pekiştiriyor ve geliştiriyor.' },
         { name: "button", textColor: '#000000', buttonColor: "#0169fd", hoverColor: "#001e9d", text: 'Etkileşimli Alıştırmaları Keşfet' },
     ],
     infoSection: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
-        { name: "text", textColor: '#000000', text: 'Section 2' },
-        { name: "button", textColor: '#000000', text: 'Section 3' },
+        { name: "header", textColor: '#000000', text: 'Etkileşimli öğrenme' },
+        { name: "text", textColor: '#000000', text: 'Öğrencilerin aktivite ve oyunlar ile hem eğlendikleri hem de öğrendikleri eğitim sistemi' },
+        { name: "header", textColor: '#000000', text: 'İstatistikler ve Analizler' },
+        { name: "text", textColor: '#000000', text: 'Öğrencilerin etkileşimlerdeki başarı oranları, istatislikleri veren ve takip eden öğretmenlere özel alt yapı' },
+        { name: "header", textColor: '#000000', text: 'Öğretmenlere özel Altyapı' },
+        { name: "text", textColor: '#000000', text: 'Öğretmenlerin kendi sınıflarını oluşturup öğrenciler ile sınıf süreçlerini yönetebildiği altyapı' },
     ],
     topClassCourses: [
         { name: "header", textColor: '#000000', text: 'Section 1' },
