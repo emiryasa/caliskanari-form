@@ -4,9 +4,6 @@ import { GiTiedScroll } from 'react-icons/gi'
 import { TfiCup } from 'react-icons/tfi'
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
-import { FcIdea } from 'react-icons/fc'
-import { GiTiedScroll } from 'react-icons/gi'
-import { TfiCup } from 'react-icons/tfi'
 
 export const useStore = create(persist((set) => ({
     searchBar: [
