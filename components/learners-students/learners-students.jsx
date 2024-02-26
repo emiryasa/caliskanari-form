@@ -1,8 +1,11 @@
 import { image, info } from "../constants/index";
 import { CustomButton } from "../helpers/custom-button";
 import { motion } from "framer-motion";
+import {useStore} from "@/zustand/index"
 
 const LearnersStudents = () => {
+  const learnersStudents=useStore((state)=>state.learnersStudents) || []
+  console.log(learnersStudents[0]?.text) 
   const { studentPhoto, underline, redCrown } = image;
   const {
     learnersStudentsTitle1,
@@ -28,16 +31,16 @@ const LearnersStudents = () => {
           />
         </div>
         <div className="flex flex-col gap-6">
-          <p className="text-sm text-cst_grey pt-8">{learnersStudentsTitle1}</p>
+          <p className="text-sm text-cst_grey pt-8">{learnersStudents[0]?.text}</p>
           <div>
             <h2 className="text-4xl text-cst_purple font-semibold relative">
-              {learnersStudentsTitle2}
+              {learnersStudents[1]?.text}
               <img src={underline} alt="" className="absolute " />
             </h2>
           </div>
-          <p className="text-base text-cst_grey">{learnersStudentsDesc}</p>
+          <p className="text-base text-cst_grey">{learnersStudents[2]?.text}</p>
           <div>
-            <CustomButton title="Etkileşimli Alıştırmaları Keşfet" />
+            <CustomButton title= {learnersStudents[3]?.text} />
           </div>
         </div>
       </div>

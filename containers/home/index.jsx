@@ -30,14 +30,14 @@ const HomeContainer = () => {
   return (
     <>
       <SearchBar />
-      <MainSection /> 
+      <MainSection />
       <InfoSection />
-     <TopClassCourses />
-       {/* <LearnersStudents />
+      <TopClassCourses />
+      <LearnersStudents />
       <FeaturedCourses />
       <VideoSection />
       <InstructorsSection />
-      <CounterSection />
+      {/*<CounterSection />
       <ClientsSection />
       <BannerSection />
       <BecomeInstructorSection />
