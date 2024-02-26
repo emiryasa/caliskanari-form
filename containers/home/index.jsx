@@ -32,8 +32,8 @@ const HomeContainer = () => {
       <SearchBar />
       <MainSection /> 
       <InfoSection />
-      {/* <TopClassCourses />
-      <LearnersStudents />
+     <TopClassCourses />
+       {/* <LearnersStudents />
       <FeaturedCourses />
       <VideoSection />
       <InstructorsSection />
