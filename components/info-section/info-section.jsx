@@ -10,7 +10,7 @@ export const InfoSection = () => {
     <div className="bg-cst_purple info-section bg-center bg-cover py-16">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:p-6 text-white">
         {informations.map((item, index) => {
-          const textColor = infoSection[index]?.textColor || ''; // Dynamically set textColor for each item
+          const textColor = infoSection[index]?.textColor || ''; 
           return (
             <motion.div key={item.title} className="hoverable-div">
               <div className="flex items-center gap-4 py-5 px-8 info-section-icons">

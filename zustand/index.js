@@ -1,7 +1,3 @@
-'use client'
-import { FcIdea } from 'react-icons/fc'
-import { GiTiedScroll } from 'react-icons/gi'
-import { TfiCup } from 'react-icons/tfi'
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 
@@ -16,15 +12,15 @@ export const useStore = create(persist((set) => ({
         { name: "text", textColor: '#000000', text: 'Okul dönemlerinde her gün binlerce öğrencimiz, %100 MEB uyumlu Çalışkan Arı Akademi ile öğrendiklerini pekiştiriyor ve geliştiriyor.' },
         { name: "button", textColor: '#000000', buttonColor: "#0169fd", hoverColor: "#001e9d", text: 'Etkileşimli Alıştırmaları Keşfet' },
     ],
-    
+
     infoSection: [
-        { name: "header", textColor: '#f8fafc', text: 'Etkileşimli öğrenme', icon: GiTiedScroll,},
+        { name: "header", textColor: '#f8fafc', text: 'Etkileşimli öğrenme'},
         { name: "text", textColor: '#f8fafc', text: 'Öğrencilerin aktivite ve oyunlar ile hem eğlendikleri hem de öğrendikleri eğitim sistemi' },
        
-        { name: "headerSecond", textColor: '#f8fafc', text: 'İstatistikler ve Analizler', icon: FcIdea}, 
+        { name: "headerSecond", textColor: '#f8fafc', text: 'İstatistikler ve Analizler'}, 
         { name: "textSecond", textColor: '#f8fafc', text: 'Öğrencilerin etkileşimlerdeki başarı oranları, istatistikleri veren ve takip eden öğretmenlere özel alt yapı' },
     
-        { name: "headerThird", textColor: '#f8fafc', text: 'Öğretmenlere özel Altyapı', icon: TfiCup },
+        { name: "headerThird", textColor: '#f8fafc', text: 'Öğretmenlere özel Altyapı'},
         { name: "textThird", textColor: '#f8fafc', text: 'Öğretmenlerin kendi sınıflarını oluşturup öğrenciler ile sınıf süreçlerini yönetebildiği altyapı' },
       ],
     topClassCourses: [
