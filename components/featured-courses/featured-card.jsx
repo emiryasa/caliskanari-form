@@ -9,12 +9,7 @@ import { useStore } from "@/zustand/index";
 import "./featured-card.css";
 
 export const FeaturedCourses = () => {
-  const featuredCourses = useStore((state) => state.featuredCourses)
-  console.log(featuredCourses[0]?.text, "featuredcourses")
-  console.log(featuredCourses[1]?.text, "featuredcourses")
-  console.log(featuredCourses[2]?.text, "featuredcourses")
-  console.log(featuredCourses[3]?.text, "featuredcourses3")
-  console.log(featuredCourses[4]?.text, "featuredcourses4")
+  const featuredCourses = useStore((state) => state.featuredCourses) || [];
   const [selectedCategory, setSelectedCategory] = useState(null);
   const { featuredTitle1, featuredTitle2 } = info;
   const { underline } = image;

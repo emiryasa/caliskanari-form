@@ -15,36 +15,36 @@ export const Page = () => {
     }, [updateSectionColor]);
 
     return (
-        <div className="flex items-center justify-center">
-            <div className="text-sm ">
-                {Object.entries(sections).map(([sectionName, sectionData]) => (
-                    typeof sectionData === 'object' && (
+        <div className="flex flex-wrap gap-2 justify-center">
+            {Object.entries(sections).map(([sectionName, sectionData]) => (
+                typeof sectionData === 'object' && (
+                    <div key={sectionName} className="w-full sm:w-1/2 md:w-1/4 bg-blue-200 lg:w-1/4 xl:w-1/4 p-4">
+                        <h2 className="text-center text-white mb-4">{sectionName}</h2>
                         <SectionInputs
-                            key={sectionName}
                             sectionName={sectionName}
                             sectionData={sectionData}
                             handleTextChange={handleTextChange}
                             handleColorChange={handleColorChange}
                         />
-                    )
-                ))}
-            </div>
+                    </div>
+                )
+            ))}
         </div>
     );
 };
 
 const SectionInputs = React.memo(({ sectionName, sectionData, handleTextChange, handleColorChange }) => (
-    <div>
+    <div className="flex flex-col">
         {sectionData.map((section, index) => (
-            <div key={index}>
+            <div key={index} className="mb-4">
                 <input
-                    className='border border-black text-black'
+                    className='border border-black text-black p-2'
                     name={`text-${sectionName}-${index}`}
                     value={section.text || ''}
                     onChange={(e) => handleTextChange(sectionName, e.target.value, index)}
                 />
                 <input
-                    className='border border-black text-black'
+                    className='border border-black text-black p-2'
                     name={`color-${sectionName}-${index}`}
                     value={section.textColor || ''}
                     type="color"

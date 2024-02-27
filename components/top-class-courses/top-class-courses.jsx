@@ -3,7 +3,7 @@ import { info, image } from "../constants/index";
 import { TopCoursesCard } from "./top-courses-card";
 
 export const TopClassCourses = () => {
-  const topClassCourses=useStore((state)=>state.topClassCourses)
+  const topClassCourses = useStore((state)=>state.topClassCourses)
 
   const {
     classCoursesTitle1,

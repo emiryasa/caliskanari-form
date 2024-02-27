@@ -8,11 +8,13 @@ import { Fragment } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 import Link from 'next/link'
 import Image from "next/image";
+import { useStore } from "@/zustand/index";
 
 export const TopBar = () => {
   const { data } = useSession();
   const { phone } = contact;
-
+  const searchBar = useStore((state) => state.searchBar) || [];
+  const desc1 = searchBar.length > 0 ? searchBar[0].text : "";
   return (
     <div className=" flex justify-between items-center mx-6 my-2">
       <div>
@@ -76,7 +78,7 @@ export const TopBar = () => {
         />
         <div className="absolute inset-y-0 right-2 flex items-center">
           <button className="flex gap-2 px-3 py-2 items-center bg-buttonColor rounded-3xl text-white text-lg hover:bg-cst_purple">
-            <CiSearch style={{ fontSize: "25px" }} /> Ara
+            <CiSearch style={{ fontSize: "25px" }} /> {desc1}
           </button>
         </div>
       </div>

@@ -7,8 +7,7 @@ export const useStore = create(persist((set) => ({
         { name: "header", textColor: '#000000', buttonColor: "#543EE8", hoverColor: "#241442", text: 'Ara' },
     ],
     mainSection: [
-        { name: "header", textColor: '#241442', text: 'Çalışkan Arı İle Öğrenmek Artık'},
-        { name: "header", textColor: '#241442', text:'Çok Kolay'},
+        { name: "header", textColor: '#241442', text: 'Çalışkan Arı İle Öğrenmek Artık Çok Kolay'},
         { name: "text", textColor: '#000000', text: 'Okul dönemlerinde her gün binlerce öğrencimiz, %100 MEB uyumlu Çalışkan Arı Akademi ile öğrendiklerini pekiştiriyor ve geliştiriyor.' },
         { name: "button", textColor: '#000000', buttonColor: "#0169fd", hoverColor: "#001e9d", text: 'Etkileşimli Alıştırmaları Keşfet' },
     ],
@@ -45,8 +44,6 @@ export const useStore = create(persist((set) => ({
         { name: "text7", textColor: '#000000', text: '3 Aktif Kurs' },
         { name: "header8", textColor: '#000000', text: '8.Sınıf' },
         { name: "text8", textColor: '#000000', text: '2 Aktif Kurs' },
-        { name: "header9", textColor: '#000000', text: '9.Sınıf' },
-        { name: "text9", textColor: '#000000', text: '9 Aktif Kurs' },
     ],
     learnersStudents: [
         { name: "header1", textColor: '#000000', text: 'LEARNERS AND STUDENTS' },
