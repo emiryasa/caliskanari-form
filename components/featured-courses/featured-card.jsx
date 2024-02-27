@@ -5,10 +5,16 @@ import { PiNotebookThin } from "react-icons/pi";
 import { info, image } from "../constants/index";
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import { useStore } from "@/zustand/index";
 import "./featured-card.css";
 
 export const FeaturedCourses = () => {
+  const featuredCourses = useStore((state) => state.featuredCourses)
+  console.log(featuredCourses[0]?.text, "featuredcourses")
+  console.log(featuredCourses[1]?.text, "featuredcourses")
+  console.log(featuredCourses[2]?.text, "featuredcourses")
+  console.log(featuredCourses[3]?.text, "featuredcourses3")
+  console.log(featuredCourses[4]?.text, "featuredcourses4")
   const [selectedCategory, setSelectedCategory] = useState(null);
   const { featuredTitle1, featuredTitle2 } = info;
   const { underline } = image;
@@ -19,35 +25,35 @@ export const FeaturedCourses = () => {
   const filteredFeatured = selectedCategory
     ? featured.filter((item) => item.topDesc === selectedCategory)
     : featured;
- 
 
-    const container = {
-      hidden: { opacity: 1, scale: 0 },
-      visible: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-          delayChildren: 0.3,
-          staggerChildren: 0.2
-        }
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
       }
     }
-      
-    const item = {
-      hidden: { y: 20, opacity: 0 },
-      visible: {
-        y: 0,
-        opacity: 1
-      }
+  }
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
     }
+  }
   return (
     <div className="bg-cream">
       <div className="mx-auto container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="flex flex-col items-center justify-between md:flex-row flex-wrap lg:flex-nowrap">
           <div className="w-full flex justify-center items-center flex-col">
-            <p className="text-cst_grey text-sm pb-2">{featuredTitle1}</p>
+            <p className="text-cst_grey text-sm pb-2">{featuredCourses[0].text}</p>
             <h2 className="text-4xl font-semibold relative pb-8 text-[#241442]">
-              {featuredTitle2}
+              {featuredCourses[1].text}
               <img src={underline} alt="" className="absolute right-20" />
             </h2>
           </div>
@@ -60,18 +66,20 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              Hepsi
+              {featuredCourses[2]?.text}
             </button>
-            <button
-              onClick={() => handleCategoryClick("Business")}
-              className={
-                selectedCategory === "Business"
-                  ? "featured-button"
-                  : "featured-select"
-              }
-            >
-              Matematik
-            </button>
+            {featuredCourses.length === 4 && (
+              <button
+                onClick={() => handleCategoryClick(featuredCourses[3].text)}
+                className={
+                  selectedCategory === "Business"
+                    ? "featured-button"
+                    : "featured-select"
+                }
+              >
+                {featuredCourses[3].text}
+              </button>
+            )}
             <button
               onClick={() => handleCategoryClick("Development")}
               className={
@@ -80,7 +88,7 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              Türkçe
+              {"featuredCourses[4]?.text"}
             </button>
             <button
               onClick={() => handleCategoryClick("Finance")}
@@ -90,7 +98,7 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              Fen Bilimleri
+              {"featuredCourses[5]?.text"}
             </button>
             <button
               onClick={() => handleCategoryClick("Technology")}
@@ -100,15 +108,15 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              İngilizce
+              {"featuredCourses[6]?.text"}
             </button>
           </div>
         </div>
 
-        <motion.ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 container"  
-        variants={container}
-    initial="hidden"
-    animate="visible">
+        <motion.ul className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 container"
+          variants={container}
+          initial="hidden"
+          animate="visible">
           {filteredFeatured.map((featured, index) => (
             <motion.li
               key={index}
@@ -148,7 +156,15 @@ export const FeaturedCourses = () => {
                   <h3 className="text-xl font-semibold text-gray-700 mb-3">
                     <a href="">
                       <span aria-hidden="true" className="absolute inset-0" />
-                      {featured.title}
+                      {/* {featured.title} */}
+                      {index === 0 && featuredCourses[11]?.text}
+                      {index === 1 && featuredCourses[12]?.text}
+                      {index === 2 && featuredCourses[13]?.text}
+                      {index === 3 && featuredCourses[14]?.text}
+                      {index === 4 && featuredCourses[15]?.text}
+                      {index === 5 && featuredCourses[16]?.text}
+                      {index === 6 && featuredCourses[17]?.text}
+                      {index === 7 && featuredCourses[18]?.text}
                     </a>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{featured.name}</p>
@@ -158,14 +174,14 @@ export const FeaturedCourses = () => {
                       value={featured.star}
                     />
                     <div className="flex flex-col items-center gap-2">
-                    <strike >
-                      {featured.discount}
-                    </strike>
-                    <p className="text-xl font-semibold text-gray-900">
-                      {featured.price}
-                    </p>
+                      <strike >
+                        {featured.discount}
+                      </strike>
+                      <p className="text-xl font-semibold text-gray-900">
+                        {featured.price}
+                      </p>
                     </div>
-                   
+
                   </div>
                 </div>
               </div>

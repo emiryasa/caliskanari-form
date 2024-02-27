@@ -5,9 +5,12 @@ import { GoVideo } from "react-icons/go";
 import { AiOutlineControl } from "react-icons/ai";
 import { BsBoxes } from "react-icons/bs";
 import { FaPlay } from "react-icons/fa";
+import { useStore } from "@/zustand/index";
 
 
 export const VideoSection = () => {
+  const videoSection = useStore((state) => state.videoSection) || [];
+  console.log(videoSection[3]?.text,"video3")
   const {
     videoTitle1,
     video,
@@ -24,23 +27,26 @@ export const VideoSection = () => {
       <div className="flex-col items-center justify-center mx-auto container ">
         <div className="flex flex-col items-center justify-center text-white mb-5 lg:mb-0 px-8 lg:px-0">
           <h2 className="text-4xl relative">
-            {videoTitle1}
+            {/* {videoTitle1} */}
+            {videoSection[0]?.text}
             <img src={underline} alt="" className="absolute right-10" />
           </h2>
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center py-10 px-8 lg:px-0">
-          <div> 
-             <Tabs defaultValue={0} orientation="vertical" className="flex"   >
+          <div>
+            <Tabs defaultValue={0} orientation="vertical" className="flex"   >
               <TabsList className="flex flex-col items-start pl-2 gap-10">
                 <div>
                   <Tab className="text-white text-xl flex items-center gap-3" >
                     <span className="text-4xl">
                       <GoVideo />
                     </span>
-                    {videoTitle2}
+                    {/* {videoTitle2} */}
+                    {videoSection[1]?.text}
                   </Tab>
                   <TabPanel className="text-base text-tabs pt-3" value={0}>
                     {videoDesc1}
+                    {/* {videoSection[2]?.text} */}
                   </TabPanel>
                 </div>
                 <div>
@@ -49,9 +55,12 @@ export const VideoSection = () => {
                       <AiOutlineControl />
                     </span>
                     {videoTitle3}
+                    {/* {videoSection[3]?.text} */}
                   </Tab>
                   <TabPanel className="text-base text-tabs pt-3" value={1}>
                     {videoDesc2}
+                   
+                    {/* {videoSection[4]?.text} */}
                   </TabPanel>
                 </div>
                 <div>
@@ -60,9 +69,12 @@ export const VideoSection = () => {
                       <BsBoxes />
                     </span>
                     {videoTitle4}
+                    
+
                   </Tab>
                   <TabPanel className="text-base text-tabs pt-3" value={2}>
                     {videoDesc3}
+                    
                   </TabPanel>
                 </div>
               </TabsList>
@@ -70,17 +82,17 @@ export const VideoSection = () => {
           </div>
 
           <div className="w-full mt-10 lg:mt-0">
-            
-            <a href={video} target="_blank" rel="noopener noreferrer" className="relative">
-            <img
-              src={videoCover}
-              alt=""
-              className="video-cover bg-videocover bg-no-repeat bg-bottom"
-            />
 
-            <span className="absolute right-2/4 bottom-2/4 rounded-full bg-white text-buttonColor w-16 h-16 flex items-center justify-center">
-              <FaPlay />
-            </span>
+            <a href={video} target="_blank" rel="noopener noreferrer" className="relative">
+              <img
+                src={videoCover}
+                alt=""
+                className="video-cover bg-videocover bg-no-repeat bg-bottom"
+              />
+
+              <span className="absolute right-2/4 bottom-2/4 rounded-full bg-white text-buttonColor w-16 h-16 flex items-center justify-center">
+                <FaPlay />
+              </span>
             </a>
           </div>
         </div>
