@@ -9,7 +9,8 @@ import { useStore } from "@/zustand/index";
 
 
 export const VideoSection = () => {
-  const videoSection = useStore((state) => state.videoSection);
+  const videoSection = useStore((state) => state.videoSection) || [];
+  console.log(videoSection[3]?.text,"video3")
   const {
     videoTitle1,
     video,
@@ -44,8 +45,8 @@ export const VideoSection = () => {
                     {videoSection[1]?.text}
                   </Tab>
                   <TabPanel className="text-base text-tabs pt-3" value={0}>
-                    {/* {videoDesc1} */}
-                    {videoSection[2]?.text}
+                    {videoDesc1}
+                    {/* {videoSection[2]?.text} */}
                   </TabPanel>
                 </div>
                 <div>
@@ -53,12 +54,13 @@ export const VideoSection = () => {
                     <span className="text-4xl">
                       <AiOutlineControl />
                     </span>
-                    {/* {videoTitle3} */}
-                    {videoSection[3]?.text}
+                    {videoTitle3}
+                    {/* {videoSection[3]?.text} */}
                   </Tab>
                   <TabPanel className="text-base text-tabs pt-3" value={1}>
-                    {/* {videoDesc2} */}
-                    {videoSection[4]?.text}
+                    {videoDesc2}
+                   
+                    {/* {videoSection[4]?.text} */}
                   </TabPanel>
                 </div>
                 <div>
@@ -67,10 +69,12 @@ export const VideoSection = () => {
                       <BsBoxes />
                     </span>
                     {videoTitle4}
+                    
+
                   </Tab>
                   <TabPanel className="text-base text-tabs pt-3" value={2}>
-                    {/* {videoDesc3} */}
-                    {videoSection[4]?.text}
+                    {videoDesc3}
+                    
                   </TabPanel>
                 </div>
               </TabsList>

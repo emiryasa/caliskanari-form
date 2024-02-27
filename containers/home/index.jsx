@@ -37,14 +37,14 @@ const HomeContainer = () => {
       <FeaturedCourses />
       <VideoSection />
       <InstructorsSection />
-      {/*<CounterSection />
+      <CounterSection />
       <ClientsSection />
       <BannerSection />
       <BecomeInstructorSection />
       <LogoBanner />
       <BlogSection />
       <LastBanner />
-      <Footer /> */}
+      <Footer /> 
     </>
   )
 }
