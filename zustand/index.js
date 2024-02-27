@@ -45,6 +45,8 @@ export const useStore = create(persist((set) => ({
         { name: "text7", textColor: '#000000', text: '3 Aktif Kurs' },
         { name: "header8", textColor: '#000000', text: '8.Sınıf' },
         { name: "text8", textColor: '#000000', text: '2 Aktif Kurs' },
+        { name: "header9", textColor: '#000000', text: '9.Sınıf' },
+        { name: "text9", textColor: '#000000', text: '9 Aktif Kurs' },
     ],
     learnersStudents: [
         { name: "header1", textColor: '#000000', text: 'LEARNERS AND STUDENTS' },
@@ -55,24 +57,26 @@ export const useStore = create(persist((set) => ({
     featuredCourses: [
         { name: "header1", textColor: '#000000', text: 'Alıştırmalar' },
         { name: "header2", textColor: '#000000', text: 'Etkileşimli İçerikleri İncele' },
-        { name: "button1", textColor: '#000000', text: 'Hepsi' },
-        { name: "button2", textColor: '#000000', text: 'Matematik' },
-        { name: "button3", textColor: '#000000', text: 'Türkçe' },
-        { name: "button4", textColor: '#000000', text: 'Fen Bilimleri' },
-        { name: "button5", textColor: '#000000', text: 'İngilizce' },
-        { name: "badge1", textColor: '#000000', text: 'Business' },
-        { name: "badge2", textColor: '#000000', text: 'Technology' },
-        { name: "badge3", textColor: '#000000', text: 'Development' },
-        { name: "badge4", textColor: '#000000', text: 'Finance' },
-        { name: "title1", textColor: '#000000', text: 'The Complete Android Development Course' },
-        { name: "title2", textColor: '#000000', text: 'The Complete Java Development Course' },
-        { name: "title3", textColor: '#000000', text: 'The Complete Wordpress Development Course' },
-        { name: "title4", textColor: '#000000', text: 'The Complete React Native Development Course' },
+        { name: "button1", textColor: '#000000', text: 'Hepsi' }
+        // { name: "button2", textColor: '#000000', text: 'Matematik' },
+        // { name: "button3", textColor: '#000000', text: 'Türkçe' },
+        // { name: "button4", textColor: '#000000', text: 'Fen Bilimleri' },
+        // { name: "button5", textColor: '#000000', text: 'İngilizce' }
 
-        { name: "title5", textColor: '#000000', text: 'JQuery and JavaScript Development Course' },
-        { name: "title6", textColor: '#000000', text: 'The Complete Cyber Security Course' },
-        { name: "title7", textColor: '#000000', text: 'The Complete SEO & Digital Marketing Course Development Course' },
-        { name: "title8", textColor: '#000000', text: 'The Complete C++ Development Course' },
+
+        // { name: "badge1", textColor: '#000000', text: 'Business' },
+        // { name: "badge2", textColor: '#000000', text: 'Technology' },
+        // { name: "badge3", textColor: '#000000', text: 'Development' },
+        // { name: "badge4", textColor: '#000000', text: 'Finance' },
+        // { name: "title1", textColor: '#000000', text: 'The Complete Android Development Course' },
+        // { name: "title2", textColor: '#000000', text: 'The Complete Java Development Course' },
+        // { name: "title3", textColor: '#000000', text: 'The Complete Wordpress Development Course' },
+        // { name: "title4", textColor: '#000000', text: 'The Complete React Native Development Course' },
+
+        // { name: "title5", textColor: '#000000', text: 'JQuery and JavaScript Development Course' },
+        // { name: "title6", textColor: '#000000', text: 'The Complete Cyber Security Course' },
+        // { name: "title7", textColor: '#000000', text: 'The Complete SEO & Digital Marketing Course Development Course' },
+        // { name: "title8", textColor: '#000000', text: 'The Complete C++ Development Course' },
     ],
 
     videoSection: [
@@ -80,39 +84,66 @@ export const useStore = create(persist((set) => ({
         { name: "header1", textColor: '#000000', text: 'Smart LMS' },
         { name: "description1", textColor: '#000000', text: 'When an unknown printer took alley ffer area typey and scrambled to make a type specimen book has' },
         { name: "header2", textColor: '#000000', text: 'Easy To Customize' },
-        { name: "description2", textColor: '#000000', text: 'When an unknown printer took alley ffer area typey and scrambled to make a type specimen book has' },
         { name: "header3", textColor: '#000000', text: 'Powerfull Dashboard' },
-        { name: "description3", textColor: '#000000', text: 'When an unknown printer took alley ffer area typey and scrambled to make a type specimen book has' },
     ],
     instructorsSection: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
-        { name: "text", textColor: '#000000', text: 'Section 2' },
-        { name: "button", textColor: '#000000', text: 'Section 3' },
+        { name: "header1", textColor: '#000000', text: 'OUR INSTRUCTURES' },
+        { name: "header2", textColor: '#000000', text: 'Greatest Teachers Inspire' },
+        { name: "header3", textColor: '#000000', text: 'When An Unknown Printer Took A Galley Offer Area Type Scrambled To Make A Type Specimen Book' },
+        // { name: "button", textColor: '#000000', text: 'See All Instructures' },
+
+        // { name: "name1", textColor: '#000000', text: 'Richard David' },
+        // { name: "title", textColor: '#000000', text: 'Marketing Expert' },
+        // { name: "course", textColor: '#000000', text: '2 Aktif Kurs' },
+        // { name: "student", textColor: '#000000', text: '6 Students' },
+
+        // { name: "name2", textColor: '#000000', text: 'Millar Richard' },
+        // { name: "title2", textColor: '#000000', text: 'Business' },
+        // { name: "course2", textColor: '#000000', text: '2 Aktif Kurs' },
+        // { name: "student2", textColor: '#000000', text: '6 Students' },
+
+        // { name: "name3", textColor: '#000000', text: 'Kriston Watson' },
+        // { name: "title3", textColor: '#000000', text: 'UX/UI Expert' },
+        // { name: "course3", textColor: '#000000', text: '1 Aktif Kurs' },
+        // { name: "student3", textColor: '#000000', text: '6 Students' },
+
+        // { name: "name4", textColor: '#000000', text: 'Jacob Janes' },
+        // { name: "title4", textColor: '#000000', text: 'UI/UX Designer' },
+        // { name: "course4", textColor: '#000000', text: '1 Aktif Kurs' },
+        // { name: "student4", textColor: '#000000', text: '6 Students' },
+
+        // { name: "name5", textColor: '#000000', text: 'Jenny Wilson' },
+        // { name: "title5", textColor: '#000000', text: 'Marketing Expert' },
+        // { name: "course5", textColor: '#000000', text: '1 Aktif Kurs' },
+        // { name: "student5", textColor: '#000000', text: '6 Students' },
     ],
     counterSection: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
-        { name: "text", textColor: '#000000', text: 'Section 2' },
-        { name: "button", textColor: '#000000', text: 'Section 3' },
+        { name: "header1", textColor: '#000000', text: 'Join In On' },
+        { name: "header2", textColor: '#000000', text: 'Something Big' },
+        // { name: "button", textColor: '#000000', text: 'Section 3' },
     ],
     clientsSection: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
-        { name: "text", textColor: '#000000', text: 'Section 2' },
-        { name: "button", textColor: '#000000', text: 'Section 3' },
+        { name: "header1", textColor: '#000000', text: 'Our Clients' },
+        { name: "header2", textColor: '#000000', text: 'What is Our Real Client Stories About Our Work & Passion' },
+        { name: "header3", textColor: '#000000', text: 'When An Un Known Printer Took A Gallery Of Type And Scrambled it To Make A Type SpecimentBook' },
+    ],
+    clientSlider:[
+
     ],
     bannerSection: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
+        { name: "header", textColor: '#000000', text: 'dfsfdfs' },
         { name: "text", textColor: '#000000', text: 'Section 2' },
         { name: "button", textColor: '#000000', text: 'Section 3' },
     ],
     becomeInstructorSection: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
-        { name: "text", textColor: '#000000', text: 'Section 2' },
-        { name: "button", textColor: '#000000', text: 'Section 3' },
+        { name: "header", textColor: '#000000', text: 'SBECOME AN INSTRUCTOR' },
+        { name: "text", textColor: '#000000', text: 'Let`s Join Us Spread Your Knowledge' },
+        { name: "text2", textColor: '#000000', text: 'When An Unknown Printer Took A Galley Offer Area Type And Scrambled To Make A Type Specimen Bookan Unknown Printer Took Alley Ffer Area Typey And Scrambled To Make A Type Specimen Book Hass' },
+        { name: "button", textColor: '#000000', text: 'BECOME AN INSTRUCTOR' },
     ],
     logoBanner: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
-        { name: "text", textColor: '#000000', text: 'Section 2' },
-        { name: "button", textColor: '#000000', text: 'Section 3' },
+        { name: "header", textColor: '#000000', text: 'Trusted By Over 13,400 Great Teams' },
+        { name: "text", textColor: '#000000', text: 'Leasing Companies Use The Same Courses To Help Employees Keep Their Skills Fresh.' },
     ],
     blogSection: [
         { name: "header", textColor: '#000000', text: 'Section 1' },
@@ -120,16 +151,10 @@ export const useStore = create(persist((set) => ({
         { name: "button", textColor: '#000000', text: 'Section 3' },
     ],
     lastBanner: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
-        { name: "text", textColor: '#000000', text: 'Section 2' },
-        { name: "button", textColor: '#000000', text: 'Section 3' },
+        { name: "header", textColor: '#000000', text: 'Affordable Online Courses & Learning Opportunities For You' },
+       
     ],
-    footer: [
-        { name: "header", textColor: '#000000', text: 'Section 1' },
-        { name: "text", textColor: '#000000', text: 'Section 2' },
-        { name: "button", textColor: '#000000', text: 'Section 3' },
-    ],
-    updateSectionColor: (sectionName, color, index) => set(state => ({
+   dateSectionColor: (sectionName, color, index) => set(state => ({
         ...state,
         [sectionName]: state[sectionName].map((section, i) =>
             i === index ? { ...section, textColor: color } : section

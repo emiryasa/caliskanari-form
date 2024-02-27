@@ -2,8 +2,10 @@ import { CustomButton } from "../helpers/custom-button";
 import { info, image, instructors } from "../constants/index";
 import { BsPerson } from "react-icons/bs";
 import { PiNotebookThin } from "react-icons/pi";
+import { useStore } from "@/zustand/index";
 
 export const InstructorsSection = () => {
+  const instructorsSection=useStore((state)=>state.instructorsSection)
   const { instructorsTitle1, instructorsTitle2, instructorsDesc } = info;
   const { underline } = image;
   return (
@@ -11,14 +13,22 @@ export const InstructorsSection = () => {
       <div className="mx-auto container flex-col items-center justify-between p-6">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           <div className="flex flex-col items-start justify-start gap-3 pb-8">
-            <p className="text-cst_grey text-sm">{instructorsTitle1}</p>
+            <p className="text-cst_grey text-sm">{/*{instructorsTitle1}*/}
+            {instructorsSection[0].text}
+            </p>
             <div>
-              <h2 className="text-cst_purple text-4xl font-semibold relative pb-2">{instructorsTitle2}
+              <h2 className="text-cst_purple text-4xl font-semibold relative pb-2">
+                {/* {instructorsTitle2} */}
+                {instructorsSection[1].text}
               <img src={underline} alt="" className="absolute right-20" />
               </h2>
             </div>
-            <p className="text-cst_grey text-base">{instructorsDesc}</p>
-            <CustomButton title="See All Instructors" />
+            {/* {instructorsDesc} */}
+            <p className="text-cst_grey text-base">
+            {instructorsSection[2].text}
+            </p>
+            {/* title="See All Instructors" */}
+            <CustomButton title="See All Instructors"/>
           </div>
 
           {instructors.map((item, index) => (

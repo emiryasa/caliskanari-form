@@ -10,9 +10,11 @@ import "./featured-card.css";
 
 export const FeaturedCourses = () => {
   const featuredCourses = useStore((state) => state.featuredCourses)
-  console.log(featuredCourses[2]?.text, "feadturedcourses")
-  console.log(featuredCourses[3]?.text, "feadturedcourses3")
-  console.log(featuredCourses[4]?.text, "feadturedcourses4")
+  console.log(featuredCourses[0]?.text, "featuredcourses")
+  console.log(featuredCourses[1]?.text, "featuredcourses")
+  console.log(featuredCourses[2]?.text, "featuredcourses")
+  console.log(featuredCourses[3]?.text, "featuredcourses3")
+  console.log(featuredCourses[4]?.text, "featuredcourses4")
   const [selectedCategory, setSelectedCategory] = useState(null);
   const { featuredTitle1, featuredTitle2 } = info;
   const { underline } = image;
@@ -66,16 +68,18 @@ export const FeaturedCourses = () => {
             >
               {featuredCourses[2]?.text}
             </button>
-            <button
-              onClick={() => handleCategoryClick("Business")}
-              className={
-                selectedCategory === "Business"
-                  ? "featured-button"
-                  : "featured-select"
-              }
-            >
-              {featuredCourses[3]?.text}
-            </button>
+            {featuredCourses.length === 4 && (
+              <button
+                onClick={() => handleCategoryClick(featuredCourses[3].text)}
+                className={
+                  selectedCategory === "Business"
+                    ? "featured-button"
+                    : "featured-select"
+                }
+              >
+                {featuredCourses[3].text}
+              </button>
+            )}
             <button
               onClick={() => handleCategoryClick("Development")}
               className={
@@ -84,7 +88,7 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              {featuredCourses[4]?.text}
+              {"featuredCourses[4]?.text"}
             </button>
             <button
               onClick={() => handleCategoryClick("Finance")}
@@ -94,7 +98,7 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              {featuredCourses[5]?.text}
+              {"featuredCourses[5]?.text"}
             </button>
             <button
               onClick={() => handleCategoryClick("Technology")}
@@ -104,7 +108,7 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              {featuredCourses[6]?.text}
+              {"featuredCourses[6]?.text"}
             </button>
           </div>
         </div>
@@ -160,7 +164,7 @@ export const FeaturedCourses = () => {
                       {index === 4 && featuredCourses[15]?.text}
                       {index === 5 && featuredCourses[16]?.text}
                       {index === 6 && featuredCourses[17]?.text}
-                      {index === 7 && featuredCourses[18]?.text}                    
+                      {index === 7 && featuredCourses[18]?.text}
                     </a>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{featured.name}</p>

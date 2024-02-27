@@ -3,6 +3,7 @@ import { coursesCard } from "../constants";
 import "./top-courses.css"
 export const TopCoursesCard = () => {
 const topCoursesCard=useStore((state)=>state.topCoursesCard) || [];
+console.log(topCoursesCard[17]?.text,"***")
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 pt-20">
       {coursesCard.map((course, index) => (
@@ -52,7 +53,8 @@ const topCoursesCard=useStore((state)=>state.topCoursesCard) || [];
                   {index === 8 && <p className="text-base text-cst_grey">{topCoursesCard[15]?.text}</p>}
 
                   {index === 9 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[16]?.text}</p>}
-                  {index === 10 && <p className="text-base text-cst_grey">{topCoursesCard[17]?.text}</p>}
+                  {index === 9 && <p className="text-base text-cst_grey">{topCoursesCard[17]?.text}</p>}
+                  
           </div>
         </div>
       ))}
