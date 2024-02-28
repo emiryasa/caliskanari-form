@@ -1,0 +1,18 @@
+[
+    {"id":1, "url":"./img/SearchBar.jpeg", "name":"searchBar"}, 
+    {"id":2, "url":"./img/MainSection.jpeg","name":"mainSection"},
+    {"id":3, "url":"./img/InfoSection.jpeg","name":"infoSection"},
+    {"id":4, "url":"./img/TopClassCourses.jpeg","name":"topClassCourses"},
+    {"id":5, "url":"./img/TopClassCourses.jpeg","name":"topCoursesCard"},
+    {"id":6, "url":"./img/LearnersStudent.jpeg","name":"learnersStudents"},
+    {"id":7, "url":"./img/FeaturedCourses.jpeg","name":"featuredCourses"},
+    {"id":8, "url":"./img/VideoSection.jpeg","name":"videoSection"},
+    {"id":9, "url":"./img/IstructureSection.jpeg ","name":"instructorsSection"},
+    {"id":10, "url":"./img/CounterSection.jpeg","name":"counterSection"},
+    {"id":11, "url":"./img/ClientSection.jpeg","name":"clientsSection"},
+    {"id":12, "url":"./img/BannerSection.jpeg","name":"bannerSection"},
+    {"id":13, "url":"./img/BecomeInstructureSection.jpeg","name":"becomeInstructorSection"},
+    {"id":14, "url":"./img/LogoBanner.jpeg","name":"logoBanner"},
+    {"id":15, "url":"./img/BlogSection.jpeg","name":"blogSection"},
+    {"id":16, "url":"./img/LastBanner.jpeg","name":"lastBanner"}
+]

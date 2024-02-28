@@ -1,8 +1,7 @@
 'use client'
 import React, { useCallback } from 'react';
 import { useStore } from '@/zustand/index';
-import images from '@/components/constants/images.json';
-
+import images from "@/components/constants/data.json";
 
 export const Page = () => {
 
@@ -19,11 +18,20 @@ export const Page = () => {
 
     return (
         <div className="flex flex-wrap gap-2 justify-center">
-            {Object.entries(sections).map(([sectionName, sectionData], index) => (
-                typeof sectionData === 'object' && images[index] && (
+            {Object.entries(sections).map(([sectionName, sectionData]) => (
+                typeof sectionData === 'object' && (
                     <div key={sectionName} className="w-full sm:w-1/2 md:w-1/4 bg-blue-200 lg:w-1/4 xl:w-1/4 p-4">
                         <div className='width:80% h-auto'>
-                            <img src={`${images[index].url}`} alt={sectionName} style={{ maxWidth: '100%', height: 'auto' }} />
+                            {images
+                                .filter(image => image.name === sectionName)
+                                .map(image => (
+                                    <img
+                                        key={image.id}
+                                        src={image.url}
+                                        alt={image.name}
+                                        style={{ maxWidth: '100%', height: 'auto' }}
+                                    />
+                                ))}
                         </div>
                         <h2 className="text-center text-white mb-4">{sectionName}</h2>
                         <SectionInputs
