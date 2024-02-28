@@ -124,9 +124,9 @@ export const useStore = create(persist((set) => ({
         { name: "header2", textColor: '#000000', text: 'What is Our Real Client Stories About Our Work & Passion' },
         { name: "header3", textColor: '#000000', text: 'When An Un Known Printer Took A Gallery Of Type And Scrambled it To Make A Type SpecimentBook' },
     ],
-    clientSlider:[
+    // clientSlider:[
 
-    ],
+    // ],
     bannerSection: [
         { name: "header", textColor: '#000000', text: 'dfsfdfs' },
         { name: "text", textColor: '#000000', text: 'Section 2' },
