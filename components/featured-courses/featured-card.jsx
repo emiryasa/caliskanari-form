@@ -46,9 +46,9 @@ export const FeaturedCourses = () => {
       <div className="mx-auto container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="flex flex-col items-center justify-between md:flex-row flex-wrap lg:flex-nowrap">
           <div className="w-full flex justify-center items-center flex-col">
-            <p className="text-cst_grey text-sm pb-2">{featuredCourses[0].text}</p>
+            <p className="text-cst_grey text-sm pb-2">{featuredCourses[0]?.text}</p>
             <h2 className="text-4xl font-semibold relative pb-8 text-[#241442]">
-              {featuredCourses[1].text}
+              {featuredCourses[1]?.text}
               <img src={underline} alt="" className="absolute right-20" />
             </h2>
           </div>
@@ -63,18 +63,18 @@ export const FeaturedCourses = () => {
             >
               {featuredCourses[2]?.text}
             </button>
-            {featuredCourses.length === 4 && (
+             
               <button
-                onClick={() => handleCategoryClick(featuredCourses[3].text)}
+                onClick={() => handleCategoryClick("Business")}
                 className={
                   selectedCategory === "Business"
                     ? "featured-button"
                     : "featured-select"
                 }
               >
-                {featuredCourses[3].text}
+                {featuredCourses[3]?.text}
               </button>
-            )}
+            
             <button
               onClick={() => handleCategoryClick("Development")}
               className={
@@ -83,7 +83,7 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              {"featuredCourses[4]?.text"}
+              {featuredCourses[4]?.text}
             </button>
             <button
               onClick={() => handleCategoryClick("Finance")}
@@ -93,7 +93,7 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              {"featuredCourses[5]?.text"}
+              {featuredCourses[5]?.text}
             </button>
             <button
               onClick={() => handleCategoryClick("Technology")}
@@ -103,7 +103,7 @@ export const FeaturedCourses = () => {
                   : "featured-select"
               }
             >
-              {"featuredCourses[6]?.text"}
+              {featuredCourses[6]?.text}
             </button>
           </div>
         </div>

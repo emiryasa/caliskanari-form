@@ -7,27 +7,27 @@ export const useStore = create(persist((set) => ({
         { name: "header", textColor: '#000000', buttonColor: "#543EE8", hoverColor: "#241442", text: 'Ara' },
     ],
     mainSection: [
-        { name: "header", textColor: '#241442', text: 'Çalışkan Arı İle Öğrenmek Artık Çok Kolay'},
+        { name: "header", textColor: '#241442', text: 'Çalışkan Arı İle Öğrenmek Artık Çok Kolay' },
         { name: "text", textColor: '#000000', text: 'Okul dönemlerinde her gün binlerce öğrencimiz, %100 MEB uyumlu Çalışkan Arı Akademi ile öğrendiklerini pekiştiriyor ve geliştiriyor.' },
         { name: "button", textColor: '#000000', buttonColor: "#0169fd", hoverColor: "#001e9d", text: 'Etkileşimli Alıştırmaları Keşfet' },
     ],
 
     infoSection: [
-        { name: "header", textColor: '#f8fafc', text: 'Etkileşimli öğrenme'},
+        { name: "header", textColor: '#f8fafc', text: 'Etkileşimli öğrenme' },
         { name: "text", textColor: '#f8fafc', text: 'Öğrencilerin aktivite ve oyunlar ile hem eğlendikleri hem de öğrendikleri eğitim sistemi' },
-       
-        { name: "headerSecond", textColor: '#f8fafc', text: 'İstatistikler ve Analizler'}, 
+
+        { name: "headerSecond", textColor: '#f8fafc', text: 'İstatistikler ve Analizler' },
         { name: "textSecond", textColor: '#f8fafc', text: 'Öğrencilerin etkileşimlerdeki başarı oranları, istatistikleri veren ve takip eden öğretmenlere özel alt yapı' },
-    
-        { name: "headerThird", textColor: '#f8fafc', text: 'Öğretmenlere özel Altyapı'},
+
+        { name: "headerThird", textColor: '#f8fafc', text: 'Öğretmenlere özel Altyapı' },
         { name: "textThird", textColor: '#f8fafc', text: 'Öğretmenlerin kendi sınıflarını oluşturup öğrenciler ile sınıf süreçlerini yönetebildiği altyapı' },
-      ],
+    ],
     topClassCourses: [
         { name: "headerTop", textColor: '#000000', text: 'EĞLENDİRİRKEN ÖĞRETEN UYGULAMA' },
         { name: "headerMain", textColor: '#000000', text: 'Şimdi Eğitici Alıştırmaları Keşfet' },
         { name: "description", textColor: '#000000', text: 'Sınıf seviyenize müfredat ilerleyişine uygun ilerleyiş ve %100 MEB uyumlu alıştırmalar' },
     ],
-    topCoursesCard:[
+    topCoursesCard: [
         { name: "header1", textColor: '#000000', text: '1.Sınıf' },
         { name: "text1", textColor: '#000000', text: '1 Aktif Kurs' },
         { name: "header2", textColor: '#000000', text: '2.Sınıf' },
@@ -54,13 +54,11 @@ export const useStore = create(persist((set) => ({
     featuredCourses: [
         { name: "header1", textColor: '#000000', text: 'Alıştırmalar' },
         { name: "header2", textColor: '#000000', text: 'Etkileşimli İçerikleri İncele' },
-        { name: "button1", textColor: '#000000', text: 'Hepsi' }
-        // { name: "button2", textColor: '#000000', text: 'Matematik' },
-        // { name: "button3", textColor: '#000000', text: 'Türkçe' },
-        // { name: "button4", textColor: '#000000', text: 'Fen Bilimleri' },
-        // { name: "button5", textColor: '#000000', text: 'İngilizce' }
-
-
+        { name: "button1", textColor: '#000000', text: 'Hepsi' },
+        { name: "button2", textColor: '#000000', text: 'Matematik' },
+        { name: "button3", textColor: '#000000', text: 'Türkçe' },
+        { name: "button4", textColor: '#000000', text: 'Fen Bilimleri' },
+        { name: "button5", textColor: '#000000', text: 'İngilizce' },
         // { name: "badge1", textColor: '#000000', text: 'Business' },
         // { name: "badge2", textColor: '#000000', text: 'Technology' },
         // { name: "badge3", textColor: '#000000', text: 'Development' },
@@ -75,7 +73,6 @@ export const useStore = create(persist((set) => ({
         // { name: "title7", textColor: '#000000', text: 'The Complete SEO & Digital Marketing Course Development Course' },
         // { name: "title8", textColor: '#000000', text: 'The Complete C++ Development Course' },
     ],
-
     videoSection: [
         { name: "header", textColor: '#000000', text: 'Çalışkan Arı Dijital İçerikler Nasıl Kullanılır' },
         { name: "header1", textColor: '#000000', text: 'Smart LMS' },
@@ -149,9 +146,9 @@ export const useStore = create(persist((set) => ({
     ],
     lastBanner: [
         { name: "header", textColor: '#000000', text: 'Affordable Online Courses & Learning Opportunities For You' },
-       
+
     ],
-   dateSectionColor: (sectionName, color, index) => set(state => ({
+    dateSectionColor: (sectionName, color, index) => set(state => ({
         ...state,
         [sectionName]: state[sectionName].map((section, i) =>
             i === index ? { ...section, textColor: color } : section
