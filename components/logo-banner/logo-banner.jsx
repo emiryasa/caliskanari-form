@@ -6,10 +6,10 @@ export const LogoBanner = () => {
   return (
     <div className="bg-cream py-24 sm:py-32">
     <div className="mx-auto container px-6">
-      <h2 className="text-center text-2xl  font-semibold leading-8 text-gray-900">
-        {logoBanner[0].text}
+      <h2 className="text-center text-2xl  font-semibold leading-8" style={{color: logoBanner[0]?.textColor}}>
+        {logoBanner[0]?.text}
       </h2>
-      <p className="text-center text-cst_grey text-base pt-10"> {logoBanner[1].text}</p>
+      <p className="text-center text-base pt-10" style={logoBanner[1]?.textColor}> {logoBanner[1]?.text}</p>
       <div className=" mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 items-center gap-x-8 gap-y-10">
        { logobanner.map((item,index)=>(
         <div key={index}>

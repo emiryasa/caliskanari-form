@@ -13,22 +13,22 @@ export const InstructorsSection = () => {
       <div className="mx-auto container flex-col items-center justify-between p-6">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           <div className="flex flex-col items-start justify-start gap-3 pb-8">
-            <p className="text-cst_grey text-sm">{/*{instructorsTitle1}*/}
-            {instructorsSection[0].text}
+            <p className="text-sm">{/*{instructorsTitle1}*/}
+            {instructorsSection[0]?.text}
             </p>
             <div>
-              <h2 className="text-cst_purple text-4xl font-semibold relative pb-2">
+              <h2 className="text-4xl font-semibold relative pb-2">
                 {/* {instructorsTitle2} */}
-                {instructorsSection[1].text}
+                {instructorsSection[1]?.text}
               <img src={underline} alt="" className="absolute right-20" />
               </h2>
             </div>
             {/* {instructorsDesc} */}
-            <p className="text-cst_grey text-base">
-            {instructorsSection[2].text}
+            <p className="text-base">
+            {instructorsSection[2]?.text}
             </p>
             {/* title="See All Instructors" */}
-            <CustomButton title="See All Instructors"/>
+            <CustomButton textColor={instructorsSection[3]?.textColor} title={instructorsSection[3]?.text}/>
           </div>
 
           {instructors.map((item, index) => (

@@ -18,7 +18,7 @@ export const CounterSection = () => {
       <div className="mx-auto container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="text-white font-bold text-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           <div className="text-center pb-4">
-            <h2>{counterSectionn[0].text} <br /> {counterSectionn[1].text}</h2>
+            <h2 style={{color: counterSectionn[0]?.textColor}}>{counterSectionn[0]?.text} <br /> {counterSectionn[1]?.text}</h2>
           </div>
 
           <span className="flex items-center justify-center gap-3 pb-4" >

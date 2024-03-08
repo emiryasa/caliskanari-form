@@ -31,16 +31,16 @@ const LearnersStudents = () => {
           />
         </div>
         <div className="flex flex-col gap-6">
-          <p className="text-sm text-cst_grey pt-8">{learnersStudents[0]?.text}</p>
+          <p className="text-sm pt-8" style={{color: learnersStudents[0]?.textColor}}>{learnersStudents[0]?.text}</p>
           <div>
-            <h2 className="text-4xl text-cst_purple font-semibold relative">
+            <h2 className="text-4xl font-semibold relative" style={{color: learnersStudents[1]?.textColor}}>
               {learnersStudents[1]?.text}
               <img src={underline} alt="" className="absolute " />
             </h2>
           </div>
-          <p className="text-base text-cst_grey">{learnersStudents[2]?.text}</p>
+          <p className="text-base" style={{color: learnersStudents[2]?.textColor}}>{learnersStudents[2]?.text}</p>
           <div>
-            <CustomButton title= {learnersStudents[3]?.text} />
+            <CustomButton textColor={learnersStudents[3]?.textColor} title= {learnersStudents[3]?.text} />
           </div>
         </div>
       </div>

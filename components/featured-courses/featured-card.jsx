@@ -46,8 +46,8 @@ export const FeaturedCourses = () => {
       <div className="mx-auto container px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div className="flex flex-col items-center justify-between md:flex-row flex-wrap lg:flex-nowrap">
           <div className="w-full flex justify-center items-center flex-col">
-            <p className="text-cst_grey text-sm pb-2">{featuredCourses[0]?.text}</p>
-            <h2 className="text-4xl font-semibold relative pb-8 text-[#241442]">
+            <p className="text-sm pb-2" style={{color: featuredCourses[0]?.textColor}}>{featuredCourses[0]?.text}</p>
+            <h2 className="text-4xl font-semibold relative pb-8" style={{color: featuredCourses[1]?.textColor}}>
               {featuredCourses[1]?.text}
               <img src={underline} alt="" className="absolute right-20" />
             </h2>
@@ -60,6 +60,7 @@ export const FeaturedCourses = () => {
                   ? "featured-button"
                   : "featured-select"
               }
+              style={{color: featuredCourses[2]?.textColor}}
             >
               {featuredCourses[2]?.text}
             </button>
@@ -71,6 +72,7 @@ export const FeaturedCourses = () => {
                     ? "featured-button"
                     : "featured-select"
                 }
+                style={{color: featuredCourses[3]?.textColor}}
               >
                 {featuredCourses[3]?.text}
               </button>
@@ -82,6 +84,7 @@ export const FeaturedCourses = () => {
                   ? "featured-button"
                   : "featured-select"
               }
+              style={{color: featuredCourses[4]?.textColor}}
             >
               {featuredCourses[4]?.text}
             </button>
@@ -92,6 +95,7 @@ export const FeaturedCourses = () => {
                   ? "featured-button"
                   : "featured-select"
               }
+              style={{color: featuredCourses[5]?.textColor}}
             >
               {featuredCourses[5]?.text}
             </button>
@@ -102,6 +106,7 @@ export const FeaturedCourses = () => {
                   ? "featured-button"
                   : "featured-select"
               }
+              style={{color: featuredCourses[6]?.textColor}}
             >
               {featuredCourses[6]?.text}
             </button>
@@ -151,15 +156,7 @@ export const FeaturedCourses = () => {
                   <h3 className="text-xl font-semibold text-gray-700 mb-3">
                     <a href="">
                       <span aria-hidden="true" className="absolute inset-0" />
-                      {/* {featured.title} */}
-                      {index === 0 && featuredCourses[11]?.text}
-                      {index === 1 && featuredCourses[12]?.text}
-                      {index === 2 && featuredCourses[13]?.text}
-                      {index === 3 && featuredCourses[14]?.text}
-                      {index === 4 && featuredCourses[15]?.text}
-                      {index === 5 && featuredCourses[16]?.text}
-                      {index === 6 && featuredCourses[17]?.text}
-                      {index === 7 && featuredCourses[18]?.text}
+                      {featured.title} 
                     </a>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{featured.name}</p>

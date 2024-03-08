@@ -15,13 +15,13 @@ export const TopClassCourses = () => {
     <div className="bg-cream">
       <div className="mx-auto container flex flex-col items-center justify-between p-6 ">
         <div className="flex flex-col justify-center items-center">
-          <p className="text-sm text-cst_grey pb-5 pt-24">{topClassCourses[0]?.text}</p>
-          <h2 className="text-cst_purple text-4xl font-semibold">
+          <p className="text-sm pb-5 pt-24" style={{color: topClassCourses[0]?.textColor}}>{topClassCourses[0]?.text}</p>
+          <h2 className="text-4xl font-semibold" style={{color: topClassCourses[1]?.textColor}}>
             {topClassCourses[1]?.text} 
             <img src={image.underline} alt="" />
           </h2>
-          <p className="text-base text-cst_grey pt-5 ">{topClassCourses[2]?.text}</p>
-          <p className="text-base text-cst_grey">{topClassCourses[3]?.text}</p>
+          <p className="text-base pt-5 " style={{color: topClassCourses[2]?.textColor}}>{topClassCourses[2]?.text}</p>
+          <p className="text-base" style={{color: topClassCourses[3]?.textColor}}>{topClassCourses[3]?.text}</p>
         </div>
         <TopCoursesCard />
       </div>

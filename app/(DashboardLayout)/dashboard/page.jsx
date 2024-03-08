@@ -29,7 +29,7 @@ export const Page = () => {
                                         key={image.id}
                                         src={image.url}
                                         alt={image.name}
-                                        style={{ maxWidth: '100%', height: 'auto' }}
+                                        className='w-full h-auto object-cover'
                                     />
                                 ))}
                         </div>
@@ -58,7 +58,7 @@ const SectionInputs = React.memo(({ sectionName, sectionData, handleTextChange, 
                     onChange={(e) => handleTextChange(sectionName, e.target.value, index)}
                 />
                 <input
-                    className='border border-black text-black p-2'
+                    className='border border-black text-black'
                     name={`color-${sectionName}-${index}`}
                     value={section.textColor || ''}
                     type="color"

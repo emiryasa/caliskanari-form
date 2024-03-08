@@ -26,8 +26,8 @@ export const VideoSection = () => {
     <div className="bg-cst_purple video-section bg-left-top bg-no-repeat pt-8 ">
       <div className="flex-col items-center justify-center mx-auto container ">
         <div className="flex flex-col items-center justify-center text-white mb-5 lg:mb-0 px-8 lg:px-0">
-          <h2 className="text-4xl relative">
-            {/* {videoTitle1} */}
+          <h2 className="text-4xl relative" style={{color: videoSection[0]?.textColor}}>
+            {/*videoTitle1*/}
             {videoSection[0]?.text}
             <img src={underline} alt="" className="absolute right-10" />
           </h2>
@@ -37,44 +37,44 @@ export const VideoSection = () => {
             <Tabs defaultValue={0} orientation="vertical" className="flex"   >
               <TabsList className="flex flex-col items-start pl-2 gap-10">
                 <div>
-                  <Tab className="text-white text-xl flex items-center gap-3" >
+                  <Tab className="text-xl flex items-center gap-3" style={{color: videoSection[1]?.textColor}}>
                     <span className="text-4xl">
                       <GoVideo />
                     </span>
-                    {/* {videoTitle2} */}
+                    {/*videoTitle2*/}
                     {videoSection[1]?.text}
                   </Tab>
-                  <TabPanel className="text-base text-tabs pt-3" value={0}>
-                    {videoDesc1}
-                    {/* {videoSection[2]?.text} */}
+                  <TabPanel className="text-base text-tabs pt-3" style={{color: videoSection[2]?.textColor}} value={0}>
+                    {/*videoDesc1*/}
+                    {videoSection[2]?.text}
                   </TabPanel>
                 </div>
                 <div>
-                  <Tab className="text-white text-xl flex items-center gap-3">
+                  <Tab className="text-xl flex items-center gap-3" style={{color: videoSection[3]?.textColor}}>
                     <span className="text-4xl">
                       <AiOutlineControl />
                     </span>
-                    {videoTitle3}
-                    {/* {videoSection[3]?.text} */}
+                    {/*videoTitle3*/}
+                    {videoSection[3]?.text}
                   </Tab>
-                  <TabPanel className="text-base text-tabs pt-3" value={1}>
-                    {videoDesc2}
+                  <TabPanel className="text-base text-tabs pt-3" style={{color: videoSection[4]?.textColor}} value={1}>
+                    {/*videoDesc2*/}
                    
-                    {/* {videoSection[4]?.text} */}
+                    {videoSection[4]?.text}
                   </TabPanel>
                 </div>
                 <div>
-                  <Tab className="text-white text-xl flex items-center gap-3">
+                  <Tab className="text-white text-xl flex items-center gap-3" style={{color: videoSection[5]?.textColor}}>
                     <span className="text-4xl">
                       <BsBoxes />
                     </span>
-                    {videoTitle4}
-                    
+                    {/*videoTitle4*/}
+                    {videoSection[5]?.text}
 
                   </Tab>
-                  <TabPanel className="text-base text-tabs pt-3" value={2}>
-                    {videoDesc3}
-                    
+                  <TabPanel className="text-base text-tabs pt-3" style={{color: videoSection[6]?.textColor}} value={2}>
+                    {/*videoDesc3*/}
+                    {videoSection[6]?.text}
                   </TabPanel>
                 </div>
               </TabsList>

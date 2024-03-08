@@ -29,32 +29,50 @@ export const TopCoursesCard = () => {
           <div className="flex flex-col">
             {/* <p className="text-xl text-cst_purple">{course.title}</p>
             <p className="text-base text-cst_grey ">{course.quantity}</p> */}
-            {index === 0 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[0]?.text}</p>}
-            {index === 0 && <p className="text-base text-cst_grey">{topCoursesCard[1]?.text}</p>}
+            {index === 0 && <p className="text-xl" style={{color: topCoursesCard[0]?.textColor}}>
+            {topCoursesCard[0]?.text}</p>}
+            {index === 0 && <p className="text-base" style={{color: topCoursesCard[1]?.textColor}}>
+            {topCoursesCard[1]?.text}</p>}
 
-            {index === 1 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[2]?.text}</p>}
-            {index === 1 && <p className="text-base text-cst_grey">{topCoursesCard[3]?.text}</p>}
+            {index === 1 && <p className="text-xl" style={{color: topCoursesCard[2]?.textColor}}>
+            {topCoursesCard[2]?.text}</p>}
+            {index === 1 && <p className="text-base" style={{color: topCoursesCard[3]?.textColor}}>
+            {topCoursesCard[3]?.text}</p>}
 
-            {index === 2 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[4]?.text}</p>}
-            {index === 2 && <p className="text-base text-cst_grey">{topCoursesCard[5]?.text}</p>}
+            {index === 2 && <p className="text-xl" style={{color: topCoursesCard[4]?.textColor}}>
+            {topCoursesCard[4]?.text}</p>}
+            {index === 2 && <p className="text-base" style={{color: topCoursesCard[5]?.textColor}}>
+            {topCoursesCard[5]?.text}</p>}
 
-            {index === 3 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[6]?.text}</p>}
-            {index === 3 && <p className="text-base text-cst_grey">{topCoursesCard[7]?.text}</p>}
+            {index === 3 && <p className="text-xl" style={{color: topCoursesCard[6]?.textColor}}>
+            {topCoursesCard[6]?.text}</p>}
+            {index === 3 && <p className="text-base" style={{color: topCoursesCard[7]?.textColor}}>
+            {topCoursesCard[7]?.text}</p>}
 
-            {index === 4 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[8]?.text}</p>}
-            {index === 4 && <p className="text-base text-cst_grey">{topCoursesCard[9]?.text}</p>}
+            {index === 4 && <p className="text-xl" style={{color: topCoursesCard[8]?.textColor}}>
+            {topCoursesCard[8]?.text}</p>}
+            {index === 4 && <p className="text-base"style={{color: topCoursesCard[9]?.textColor}}>
+            {topCoursesCard[9]?.text}</p>}
 
-            {index === 5 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[10]?.text}</p>}
-            {index === 5 && <p className="text-base text-cst_grey">{topCoursesCard[11]?.text}</p>}
+            {index === 5 && <p className="text-xl"style={{color: topCoursesCard[10]?.textColor}}>
+            {topCoursesCard[10]?.text}</p>}
+            {index === 5 && <p className="text-base" style={{color: topCoursesCard[11]?.textColor}}>
+            {topCoursesCard[11]?.text}</p>}
 
-            {index === 6 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[12]?.text}</p>}
-            {index === 6 && <p className="text-base text-cst_grey">{topCoursesCard[13]?.text}</p>}
+            {index === 6 && <p className="text-xl" style={{color: topCoursesCard[12]?.textColor}}>
+            {topCoursesCard[12]?.text}</p>}
+            {index === 6 && <p className="text-base" style={{color: topCoursesCard[13]?.textColor}}>
+            {topCoursesCard[13]?.text}</p>}
 
-            {index === 7 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[14]?.text}</p>}
-            {index === 7 && <p className="text-base text-cst_grey">{topCoursesCard[15]?.text}</p>}
+            {index === 7 && <p className="text-xl" style={{color: topCoursesCard[14]?.textColor}}>
+            {topCoursesCard[14]?.text}</p>}
+            {index === 7 && <p className="text-base" style={{color: topCoursesCard[15]?.textColor}}>
+            {topCoursesCard[15]?.text}</p>}
 
-            {index === 8 && <p className={`text-xl text-cst_purple`}>{topCoursesCard[16]?.text}</p>}
-            {index === 8 && <p className="text-base text-cst_grey">{topCoursesCard[17]?.text}</p>}
+            {index === 8 && <p className="text-xl" style={{color: topCoursesCard[16]?.textColor}}>
+            {topCoursesCard[16]?.text}</p>}
+            {index === 8 && <p className="text-base" style={{color: topCoursesCard[17]?.textColor}}>
+            {topCoursesCard[17]?.text}</p>}
           </div>
         </div>
       ))}
