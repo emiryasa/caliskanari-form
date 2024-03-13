@@ -57,6 +57,72 @@ const buttons = [
                 ]
             }
         ]
+    },
+    {
+        title: "Sayfa Düzenlemeleri",
+        buttons: [
+            {
+                id: "1.5",
+                label: "Sayfa Düzenlemeleri",
+                icon: UserIcon,
+                childs: [
+                    {
+                        id: "1.5.1",
+                        label: "Main",
+                        icon: UserIcon,
+                        path: "/dashboard/mainSection",
+                    },
+                    {
+                        id: "1.5.2",
+                        label: "İnfo",
+                        icon: UserIcon,
+                        path: "/dashboard/infoSection",
+                    },
+                    {
+                        id: "1.5.3",
+                        label: "Top Class Courses",
+                        icon: UserIcon,
+                        path: "/dashboard/topclasscourses",
+                    },
+                    {
+                        id: "1.5.4",
+                        label: "Become An Instructor",
+                        icon: UserIcon,
+                        path: "/dashboard/becomeaninstructor",
+                    },
+                    {
+                        id: "1.5.5",
+                        label: "Clients",
+                        icon: UserIcon,
+                        path: "/dashboard/clients",
+                    },
+                    {
+                        id: "1.5.6",
+                        label: "Counter",
+                        icon: UserIcon,
+                        path: "/dashboard/counter",
+                    },
+                    {
+                        id: "1.5.7",
+                        label: "Banner",
+                        icon: UserIcon,
+                        path: "/dashboard/banner",
+                    },
+                    {
+                        id: "1.5.8",
+                        label: "Blog",
+                        icon: UserIcon,
+                        path: "/dashboard/blog",
+                    },
+                    {
+                        id: "1.5.9",
+                        label: "Last Banner",
+                        icon: UserIcon,
+                        path: "/dashboard/lastbanner",
+                    },
+                ]
+            }
+        ]
     }
 ]
 

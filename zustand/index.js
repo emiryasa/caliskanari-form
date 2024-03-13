@@ -2,14 +2,10 @@ import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 
 export const useStore = create(persist((set) => ({
-    searchBar: [
-        { name: "header", textColor: '#000000', buttonColor: "#543EE8", hoverColor: "#241442", text: 'Ara' },
-    ],
-
     mainSection: [
         { name: "header", textColor: '#241442', text: 'Çalışkan Arı İle Öğrenmek Artık Çok Kolay' },
-        { name: "text", textColor: '#000000', text: 'Okul dönemlerinde her gün binlerce öğrencimiz, %100 MEB uyumlu Çalışkan Arı Akademi ile öğrendiklerini pekiştiriyor ve geliştiriyor.' },
-        { name: "button", textColor: '#000000', buttonColor: "#0169fd", hoverColor: "#001e9d", text: 'Etkileşimli Alıştırmaları Keşfet' },
+        { name: "text", textColor: '#FFFFFF', text: 'Okul dönemlerinde her gün binlerce öğrencimiz, %100 MEB uyumlu Çalışkan Arı Akademi ile öğrendiklerini pekiştiriyor ve geliştiriyor.' },
+        { name: "button", textColor: '#FFFFFF', text: 'Etkileşimli Alıştırmaları Keşfet' },
     ],
 
     infoSection: [
@@ -81,31 +77,6 @@ export const useStore = create(persist((set) => ({
         { name: "header2", textColor: '#241442', text: 'Greatest Teachers Inspire' },
         { name: "header3", textColor: '#4f536c', text: 'When An Unknown Printer Took A Galley Offer Area Type Scrambled To Make A Type Specimen Book' },
         { name: "button", textColor: '#FFFFFF', text: 'See All Instructures' },
-
-        // { name: "name1", textColor: '#000000', text: 'Richard David' },
-        // { name: "title", textColor: '#000000', text: 'Marketing Expert' },
-        // { name: "course", textColor: '#000000', text: '2 Aktif Kurs' },
-        // { name: "student", textColor: '#000000', text: '6 Students' },
-
-        // { name: "name2", textColor: '#000000', text: 'Millar Richard' },
-        // { name: "title2", textColor: '#000000', text: 'Business' },
-        // { name: "course2", textColor: '#000000', text: '2 Aktif Kurs' },
-        // { name: "student2", textColor: '#000000', text: '6 Students' },
-
-        // { name: "name3", textColor: '#000000', text: 'Kriston Watson' },
-        // { name: "title3", textColor: '#000000', text: 'UX/UI Expert' },
-        // { name: "course3", textColor: '#000000', text: '1 Aktif Kurs' },
-        // { name: "student3", textColor: '#000000', text: '6 Students' },
-
-        // { name: "name4", textColor: '#000000', text: 'Jacob Janes' },
-        // { name: "title4", textColor: '#000000', text: 'UI/UX Designer' },
-        // { name: "course4", textColor: '#000000', text: '1 Aktif Kurs' },
-        // { name: "student4", textColor: '#000000', text: '6 Students' },
-
-        // { name: "name5", textColor: '#000000', text: 'Jenny Wilson' },
-        // { name: "title5", textColor: '#000000', text: 'Marketing Expert' },
-        // { name: "course5", textColor: '#000000', text: '1 Aktif Kurs' },
-        // { name: "student5", textColor: '#000000', text: '6 Students' },
     ],
 
     counterSection: [
@@ -118,12 +89,6 @@ export const useStore = create(persist((set) => ({
         { name: "header2", textColor: '#241442', text: 'What is Our Real Client Stories About Our Work & Passion' },
         { name: "header3", textColor: '#4f536c', text: 'When An Un Known Printer Took A Gallery Of Type And Scrambled it To Make A Type SpecimentBook' },
     ],
-
-    /* clientSlider:[
-        { name: "header1", textColor: '#4f536c', text: 'Our Clients' },
-        { name: "header2", textColor: '#241442', text: 'What is Our Real Client Stories About Our Work & Passion' },
-        { name: "header3", textColor: '#4f536c', text: 'When An Un Known Printer Took A Gallery Of Type And Scrambled it To Make A Type SpecimentBook' },
-    ], */
 
     bannerSection: [
         { name: "header", textColor: '#FFFFFF', text: 'dfsfdfs' },
